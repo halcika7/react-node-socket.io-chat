@@ -12,7 +12,7 @@
     "watch": "npm run dirs && concurrently \"npm run build:js --watch\" \"npm run serve:dev\"",
     "dirs": "rimraf dist && mkdirp dist",
     "build": "npm run build:types && npm run build:js",
-    "build:types": "npm run tsc -p tsconfig.prod.json",
+    "build:types": "npm run tsc -p tsconfig.json",
     "build:js": "babel src --out-dir dist --extensions \".ts\"",
     "tsc": "tsc"
   },
