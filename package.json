@@ -7,7 +7,6 @@
     ]
   },
   "scripts": {
-    "build": "yarn build-server && yarn build-front",
     "build-server": "yarn --cwd backend build",
     "build-front": "yarn --cwd frontend build",
     "server": "yarn --cwd backend watch",
@@ -19,7 +18,7 @@
     "lint": "eslint --fix frontend/**/*.{ts,tsx} backend/src/**/*.ts",
     "front-deploy": "yarn --cwd frontend && yarn build-front",
     "back-deploy": "yarn --cwd backend && yarn build-server",
-    "heroku-postbuild": "yarn --cwd backend && yarn && yarn build"
+    "heroku-postbuild": "cd backend && npm run install && npm run install build"
   },
   "dependencies": {
     "concurrently": "^5.2.0"
