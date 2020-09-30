@@ -16,7 +16,10 @@
     "frontend-prod": "yarn --cwd frontend start",
     "dev": "concurrently \"yarn server\" \"yarn frontend\"",
     "prod": "concurrently \"yarn server-prod\" \"yarn frontend-prod\"",
-    "lint": "eslint --fix frontend/**/*.{ts,tsx} backend/src/**/*.ts"
+    "lint": "eslint --fix frontend/**/*.{ts,tsx} backend/src/**/*.ts",
+    "front-deploy": "yarn --cwd frontend && yarn build-front",
+    "back-deploy": "yarn --cwd backend && yarn build-server",
+    "heroku-postbuild": "cd backend && yarn && yarn build"
   },
   "dependencies": {
     "concurrently": "^5.2.0"

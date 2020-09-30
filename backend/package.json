@@ -14,8 +14,7 @@
     "build": "yarn build:types && yarn build:js",
     "build:types": "yarn tsc -p tsconfig.prod.json --emitDeclarationOnly",
     "build:js": "babel src --out-dir dist --extensions \".ts\"",
-    "tsc": "tsc",
-    "postinstall": "yarn build"
+    "tsc": "tsc"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
