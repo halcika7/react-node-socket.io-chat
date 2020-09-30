@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import { config } from 'dotenv';
-import { getServiceIdentifierAsString } from 'inversify';
 
 config();
 
