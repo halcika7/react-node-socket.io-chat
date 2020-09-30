@@ -22,9 +22,6 @@ function App() {
   const dispatch = useThunkDispatch();
   const { isAuthenticated, loading, id } = useSelector(reduxProps);
 
-  useEffect(() => {
-    dispatch(refreshToken);
-  }, [dispatch]);
 
   if (loading) return <Spinner />;
 
