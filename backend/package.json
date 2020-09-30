@@ -13,7 +13,7 @@
     "dirs": "rimraf dist && mkdirp dist",
     "build": "npm run build:types && npm run build:js",
     "build:types": "npm run tsc",
-    "build:js": "babel src --out-dir dist",
+    "build:js": "babel src --out-dir dist --extensions \".ts\"",
     "tsc": "tsc"
   },
   "devDependencies": {
