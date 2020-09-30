@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useThunkDispatch } from './redux/AppThunkDispatch';
-import { refreshToken } from './redux/actions';
 import Home from './components/Home';
 import Login from './components/Login';
 import Spinner from './components/Spinner';
