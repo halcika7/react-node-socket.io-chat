@@ -11,7 +11,6 @@
     "serve:dev": "nodemon dist/server.js",
     "watch": "yarn dirs && concurrently \"yarn build:js --watch\" \"yarn serve:dev\"",
     "dirs": "rimraf dist && mkdirp dist",
-    "build": "yarn build:types && yarn build:js",
     "build:types": "yarn tsc",
     "build:js": "babel src --out-dir dist --extensions \".ts\"",
     "tsc": "tsc"
