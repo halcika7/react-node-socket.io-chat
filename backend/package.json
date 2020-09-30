@@ -12,8 +12,9 @@
     "watch": "yarn dirs && concurrently \"yarn build:js --watch\" \"yarn serve:dev\"",
     "dirs": "rimraf dist && mkdirp dist",
     "build": "yarn build:types && yarn build:js",
-    "build:types": "tsc -p tsconfig.prod.json --emitDeclarationOnly",
+    "build:types": "yarn tsc -p tsconfig.prod.json --emitDeclarationOnly",
     "build:js": "babel src --out-dir dist --extensions \".ts\"",
+    "tsc": "tsc",
     "postinstall": "yarn build"
   },
   "devDependencies": {
