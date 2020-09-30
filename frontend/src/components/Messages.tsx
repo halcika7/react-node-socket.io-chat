@@ -111,7 +111,7 @@ const Messages: FC<{ client: SocketIOClient.Socket; id: string }> = ({
       client.off('is-typing');
       client.off('loaded-more');
     };
-  }, [id, client, dispatch, selectedUser]);
+  }, [id, client, dispatch, selectedUser, skip]);
 
   useEffect(() => {
     if (messages) setLocalMessages(messages.reverse());
