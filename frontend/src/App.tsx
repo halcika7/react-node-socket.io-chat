@@ -1,5 +1,4 @@
 import React from 'react';
-import { useThunkDispatch } from './redux/AppThunkDispatch';
 import Home from './components/Home';
 import Login from './components/Login';
 import Spinner from './components/Spinner';
@@ -18,7 +17,6 @@ const reduxProps = createSelector(
 );
 
 function App() {
-  const dispatch = useThunkDispatch();
   const { isAuthenticated, loading, id } = useSelector(reduxProps);
 
 
