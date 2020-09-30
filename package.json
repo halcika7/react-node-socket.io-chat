@@ -9,6 +9,7 @@
   "scripts": {
     "build-server": "yarn --cwd backend build",
     "build-front": "yarn --cwd frontend build",
+    "build": "yarn --cwd backend",
     "start": "yarn --cwd backend start",
     "server": "yarn --cwd backend watch",
     "server-prod": "yarn --cwd backend start",
