@@ -6,13 +6,13 @@
   "main": "dist/server.js",
   "private": true,
   "scripts": {
-    "start": "npm run serve",
+    "start": "yarn serve",
     "serve": "node dist/server.js",
     "serve:dev": "nodemon dist/server.js",
-    "watch": "npm run dirs && concurrently \"npm run build:js --watch\" \"npm run serve:dev\"",
+    "watch": "yarn dirs && concurrently \"yarn build:js --watch\" \"yarn serve:dev\"",
     "dirs": "rimraf dist && mkdirp dist",
-    "build": "npm run build:types && npm run build:js",
-    "build:types": "npm run tsc",
+    "build": "yarn build:types && yarn build:js",
+    "build:types": "yarn tsc",
     "build:js": "babel src --out-dir dist --extensions \".ts\"",
     "tsc": "tsc"
   },

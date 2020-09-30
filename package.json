@@ -18,7 +18,7 @@
     "lint": "eslint --fix frontend/**/*.{ts,tsx} backend/src/**/*.ts",
     "front-deploy": "yarn --cwd frontend && yarn build-front",
     "back-deploy": "yarn --cwd backend && yarn build-server",
-    "heroku-postbuild": "cd backend && npm install && npm run build"
+    "heroku-postbuild": "yarn --cwd backend && yarn --cwd backend build && yarn --cwd backend start"
   },
   "dependencies": {
     "concurrently": "^5.2.0"
