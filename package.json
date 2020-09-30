@@ -9,7 +9,8 @@
   "scripts": {
     "build-server": "yarn --cwd backend build",
     "build-front": "yarn --cwd frontend build",
-    "build": "yarn --cwd backend start",
+    "build": "yarn back-deploy",
+    "start": "yarn --cwd backend start",
     "server": "yarn --cwd backend watch",
     "server-prod": "yarn --cwd backend start",
     "frontend": "yarn --cwd frontend start",
@@ -18,8 +19,7 @@
     "prod": "concurrently \"yarn server-prod\" \"yarn frontend-prod\"",
     "lint": "eslint --fix frontend/**/*.{ts,tsx} backend/src/**/*.ts",
     "front-deploy": "yarn --cwd frontend && yarn build-front",
-    "back-deploy": "yarn --cwd backend && yarn build-server",
-    "heroku-postbuild": "yarn --cwd backend && yarn --cwd backend build"
+    "back-deploy": "yarn --cwd backend && yarn build-server"
   },
   "dependencies": {
     "concurrently": "^5.2.0"
