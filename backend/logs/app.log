@@ -4106,3 +4106,25 @@
 {"app":"backend","timestamp":"2020-09-30T22:38:04.179Z","hostName":"Hariss-MacBook-Pro.local","class":"db-connection","method":"create-db-connection","event":"Database connected","level":"info"}
 {"app":"backend","timestamp":"2020-09-30T22:42:21.012Z","hostName":"Hariss-MacBook-Pro.local","class":"App","method":"this.app.listen","event":"App is running at http://localhost:5000 in dev mode.","level":"info"}
 {"app":"backend","timestamp":"2020-09-30T22:42:20.951Z","hostName":"Hariss-MacBook-Pro.local","class":"db-connection","method":"create-db-connection","event":"Database connected","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T07:16:19.865Z","hostName":"Hariss-MacBook-Pro.local","class":"App","method":"this.app.listen","event":"App is running at http://localhost:5000 in dev mode.","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T07:16:19.816Z","hostName":"Hariss-MacBook-Pro.local","class":"db-connection","method":"create-db-connection","event":"Database connected","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:16:13.123Z","hostName":"Hariss-MacBook-Pro.local","class":"App","method":"this.app.listen","event":"App is running at http://localhost:5000 in dev mode.","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:16:13.054Z","hostName":"Hariss-MacBook-Pro.local","class":"db-connection","method":"create-db-connection","event":"Database connected","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:16:25.900Z","hostName":"Hariss-MacBook-Pro.local","class":"App","method":"this.app.listen","event":"App is running at http://localhost:5000 in dev mode.","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:16:25.853Z","hostName":"Hariss-MacBook-Pro.local","class":"db-connection","method":"create-db-connection","event":"Database connected","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:16:30.265Z","hostName":"Hariss-MacBook-Pro.local","class":"App","method":"this.app.listen","event":"App is running at http://localhost:5000 in dev mode.","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:16:30.229Z","hostName":"Hariss-MacBook-Pro.local","class":"db-connection","method":"create-db-connection","event":"Database connected","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:16:35.656Z","hostName":"Hariss-MacBook-Pro.local","class":"App","method":"this.app.listen","event":"App is running at http://localhost:5000 in dev mode.","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:16:35.620Z","hostName":"Hariss-MacBook-Pro.local","class":"db-connection","method":"create-db-connection","event":"Database connected","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:16:43.088Z","hostName":"Hariss-MacBook-Pro.local","class":"App","method":"this.app.listen","event":"App is running at http://localhost:5000 in dev mode.","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:16:43.052Z","hostName":"Hariss-MacBook-Pro.local","class":"db-connection","method":"create-db-connection","event":"Database connected","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:18:32.720Z","hostName":"Hariss-MacBook-Pro.local","class":"App","method":"this.app.listen","event":"App is running at http://localhost:5000 in dev mode.","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:18:32.684Z","hostName":"Hariss-MacBook-Pro.local","class":"db-connection","method":"create-db-connection","event":"Database connected","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:18:35.626Z","hostName":"Hariss-MacBook-Pro.local","class":"App","method":"this.app.listen","event":"App is running at http://localhost:5000 in dev mode.","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:18:35.587Z","hostName":"Hariss-MacBook-Pro.local","class":"db-connection","method":"create-db-connection","event":"Database connected","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:18:38.512Z","hostName":"Hariss-MacBook-Pro.local","class":"App","method":"this.app.listen","event":"App is running at http://localhost:5000 in dev mode.","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:18:38.466Z","hostName":"Hariss-MacBook-Pro.local","class":"db-connection","method":"create-db-connection","event":"Database connected","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:18:40.679Z","hostName":"Hariss-MacBook-Pro.local","class":"App","method":"this.app.listen","event":"App is running at http://localhost:5000 in dev mode.","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:18:40.641Z","hostName":"Hariss-MacBook-Pro.local","class":"db-connection","method":"create-db-connection","event":"Database connected","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:18:52.757Z","hostName":"Hariss-MacBook-Pro.local","class":"App","method":"this.app.listen","event":"App is running at http://localhost:5000 in dev mode.","level":"info"}
+{"app":"backend","timestamp":"2020-10-01T08:18:52.720Z","hostName":"Hariss-MacBook-Pro.local","class":"db-connection","method":"create-db-connection","event":"Database connected","level":"info"}

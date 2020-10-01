@@ -19,21 +19,7 @@ import { UserInterface } from '@model/User/User';
 import { CookieService } from './Cookie';
 import { JWTService } from './JWT';
 import { Injectable } from '@decorator/class';
-
-type providerType =
-  | 'google'
-  | 'facebook'
-  | 'twitter'
-  | 'linkedin'
-  | 'github'
-  | 'spotify';
-type idTypes =
-  | 'googleId'
-  | 'facebookId'
-  | 'twitterId'
-  | 'linkedinId'
-  | 'githubId'
-  | 'spotifyId';
+import { idTypes, providerType } from '@ctypes';
 
 interface Profile extends GoogleProfile {
   emails: { value: string }[];

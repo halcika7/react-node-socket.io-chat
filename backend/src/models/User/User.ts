@@ -1,13 +1,5 @@
+import { idTypes } from '@ctypes';
 import { Document } from 'mongoose';
-
-type idTypes =
-  | 'googleId'
-  | 'facebookId'
-  | 'twitterId'
-  | 'linkedinId'
-  | 'githubId'
-  | 'spotifyId'
-  | 'steamId';
 
 export interface UserInterface extends Document {
   name: string;

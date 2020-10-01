@@ -19,10 +19,6 @@
             "rootPathPrefix": "@env"
           },
           {
-            "rootPathSuffix": "./src/configs",
-            "rootPathPrefix": "@config/"
-          },
-          {
             "rootPathSuffix": "./src/controllers",
             "rootPathPrefix": "@controller/"
           },

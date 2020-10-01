@@ -34,10 +34,14 @@ export function UsersReducer(
         users[index] = { ...users[index], socketId };
         return { ...prevState, users };
       }
-      let us = user as User;
+      const us = user as User;
       if (us._id) {
         const index = users.findIndex(u => u._id === us._id);
-        users[index] = { ...us };
+        if (index === -1) {
+          users.push(us);
+        } else {
+          users[index] = { ...us };
+        }
         return { ...prevState, users };
       }
       users.push(user as User);

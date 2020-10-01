@@ -10,6 +10,7 @@ import {
   updateOrAdd,
   setSelectedUser,
   setMessages,
+  refreshToken,
 } from '../redux/actions';
 import { User, UpdateUser } from '../lib/customTypes';
 import { createSelector } from 'reselect';
@@ -23,6 +24,19 @@ const Container = styled.section`
   background: #444753;
   border-radius: 5px;
   display: flex;
+`;
+
+const Button = styled.button`
+  border: none;
+  cursor: pointer;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px auto;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  background: tomato;
+  color: #fff;
 `;
 
 const reduxProps = createSelector(
@@ -44,7 +58,7 @@ const Home = () => {
 
   const logout = () => {
     if (client) client.emit('logout');
-    dispatch(logoutUser);
+    dispatch(logoutUser(history));
   };
 
   useEffect(() => {
@@ -54,6 +68,7 @@ const Home = () => {
       dispatch(setUsers(data.users))
     );
 
+    // eslint-disable-next-line no-shadow
     client.on('logout', (id: string) =>
       dispatch(updateOrAdd({}, id, undefined))
     );
@@ -67,12 +82,15 @@ const Home = () => {
       setOtherOnline(prev => [...prev, { userId, socketId }]);
     });
 
+    client.on('Authorization-Error', () => dispatch(refreshToken));
+
+    // eslint-disable-next-line consistent-return
     return () => {
       client.off('users');
       client.off('logout');
       client.off('user-logged');
       client.off('im-online-too');
-      client.close();
+      client.off('Authorization-Error');
     };
   }, [client, dispatch]);
 
@@ -91,8 +109,8 @@ const Home = () => {
   }, [users, otherOnline, dispatch]);
 
   useEffect(() => {
-    if(!id && users.length) {
-      history.push(`/${users[0]._id}`)
+    if (!id && users.length) {
+      history.push(`/${users[0]._id}`);
     }
     if (id && users.length) {
       if (ref.current !== id) {
@@ -106,7 +124,7 @@ const Home = () => {
 
   return (
     <>
-      <button onClick={logout}>Logout</button>
+      <Button onClick={logout}>Logout</Button>
       <Container className="clearfix">
         <Users users={users} />
         {selectedUser && (

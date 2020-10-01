@@ -1,6 +1,5 @@
 import jwt from 'jsonwebtoken';
 import { Configuration } from '@env';
-
 import { UnauthorizedException } from '@exceptions';
 
 export abstract class JWTService {

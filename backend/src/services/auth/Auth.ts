@@ -1,18 +1,9 @@
 /* eslint-disable security/detect-object-injection */
 import { BaseService } from '../Base';
-
-// static classes
 import { JWTService } from '../JWT';
-
-// types
 import { ResponseTokens, Token } from '@ctypes';
-
-// exceptions
 import { HTTPCodes } from '@codes';
-
-// decorators
 import { Injectable } from '@decorator/class';
-
 import { AuthServiceInerface } from './AuthServiceI';
 
 @Injectable()

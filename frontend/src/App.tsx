@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useThunkDispatch } from './redux/AppThunkDispatch';
+import { refreshToken } from './redux/actions';
 import Home from './components/Home';
 import Login from './components/Login';
 import Spinner from './components/Spinner';
@@ -13,21 +15,32 @@ const reduxProps = createSelector(
   (state: AppState) => state.auth.authLoading,
   (state: AppState) => state.auth.isAuthenticated,
   (state: AppState) => state.auth.id,
-  (loading, isAuthenticated, id) => ({ loading, isAuthenticated, id })
+  (state: AppState) => state.auth.token,
+  (loading, isAuthenticated, id, token) => ({
+    loading,
+    isAuthenticated,
+    id,
+    token,
+  })
 );
 
 function App() {
-  const { isAuthenticated, loading, id } = useSelector(reduxProps);
+  const dispatch = useThunkDispatch();
+  const { isAuthenticated, loading, id, token } = useSelector(reduxProps);
 
+  useEffect(() => {
+    dispatch(refreshToken);
+  }, [dispatch]);
 
   if (loading) return <Spinner />;
 
-  if (isAuthenticated)
+  if (isAuthenticated) {
     return (
-      <SocketProvider id={id as string}>
+      <SocketProvider id={id as string} token={token as string}>
         <Home />
       </SocketProvider>
     );
+  }
 
   return <Login />;
 }

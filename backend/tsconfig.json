@@ -35,7 +35,6 @@
     "lib": ["es2016", "es2017.object", "es2019"],
     "paths": {
       "@env": ["src/configs/index"],
-      "@config/*": ["src/configs/*"],
       "@controller/*": ["src/controllers/*"],
       "@middleware/*": ["src/middlewares/*"],
       "@model/*": ["src/models/*"],

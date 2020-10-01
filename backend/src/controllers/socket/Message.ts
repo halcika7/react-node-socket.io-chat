@@ -23,7 +23,7 @@ interface PostBodyMessage {
 export class MessageController {
   constructor(private readonly messageRepository: MessageRepository) {}
 
-  @OnMessage('get-messages')
+  @OnMessage('get-messages', socketM)
   async messages(
     @Payload() otherUserId: string,
     @SocketIO() io: Server,
@@ -61,7 +61,7 @@ export class MessageController {
     return socket.emit('receive-message', message);
   }
 
-  @OnMessage('user-typing')
+  @OnMessage('user-typing', socketM)
   typing(
     @Payload() { typing, socketId }: { typing: boolean; socketId: string },
     @SocketIO() io: Server,
@@ -70,7 +70,7 @@ export class MessageController {
     return io.to(socketId).emit('is-typing', { typing, senderId });
   }
 
-  @OnMessage('load-more')
+  @OnMessage('load-more', socketM)
   async loadMore(
     @SocketIO() io: Server,
     @SocketID() id: string,

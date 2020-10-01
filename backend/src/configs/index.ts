@@ -84,10 +84,7 @@ const {
   BACKEND_URL,
 } = process.env;
 
-const SERVER_URL =
-  NODE_ENV === 'production'
-    ? `${BACKEND_URL}/api/auth/`
-    : 'http://localhost:5000/api/auth/';
+const SERVER_URL = `${BACKEND_URL}/api/auth/`;
 
 export class Configuration {
   private constructor() {}

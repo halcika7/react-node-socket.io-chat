@@ -4,6 +4,7 @@ import { AuthToken } from '../../lib/decode';
 // types
 import { AppThunkDispatch } from '../AppThunkDispatch';
 import { AuthActions, AuthActionTypes } from '../types/auth';
+import { RouteComponentProps } from "react-router"
 
 export const authSuccess = (token: string): AuthActionTypes => ({
   type: AuthActions.AUTH_SUCCESS,
@@ -15,12 +16,12 @@ export const authReset = (): AuthActionTypes => ({
   payload: {},
 });
 
-export const logoutUser = async (
+export const logoutUser = (history: RouteComponentProps['history']) => async (
   dispatch: AppThunkDispatch
-): Promise<AuthActionTypes> => {
+) => {
   await axios.post<{ message?: string }>('/auth/logout');
-
-  return dispatch(authReset());
+  dispatch(authReset());
+  history.replace('/')
 };
 
 export const refreshToken = async (dispatch: AppThunkDispatch) => {

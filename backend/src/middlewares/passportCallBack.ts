@@ -1,15 +1,8 @@
 import { Request, Response } from 'express';
 import { PassportService } from '@service/Passport';
+import { providerType } from '@ctypes';
 
 const passportService = new PassportService();
-
-type providerType =
-  | 'google'
-  | 'facebook'
-  | 'twitter'
-  | 'linkedin'
-  | 'github'
-  | 'spotify';
 
 export const passportCallBack = (provider: providerType) => (
   req: Request,

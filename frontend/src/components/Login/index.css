@@ -64,7 +64,14 @@
 
 .login100-form {
   width: 50%;
-  padding: 40px 65px;
+  padding: 40px 45px;
+}
+
+@media (max-width: 400px) {
+  .login100-form {
+    width: 50%;
+    padding: 40px 10px;
+  }
 }
 
 .login100-form-title {

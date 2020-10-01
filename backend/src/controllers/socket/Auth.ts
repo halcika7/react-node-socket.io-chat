@@ -11,6 +11,7 @@ import {
   SocketQueryParam,
 } from '@socket';
 import { Socket, Server } from 'socket.io';
+import { socketM } from '@middleware/socket';
 
 @Injectable()
 @SocketController('')
@@ -32,7 +33,7 @@ export class AuthSocketController {
     return io.to(id).emit('users', { users: [...allUsers] });
   }
 
-  @OnMessage('logout')
+  @OnMessage('logout', socketM)
   logout(
     @SocketQueryParam('id') id: string,
     @ConnectedSocket() socket: Socket
@@ -40,7 +41,7 @@ export class AuthSocketController {
     return socket.broadcast.emit('logout', id);
   }
 
-  @OnMessage('im-online-too')
+  @OnMessage('im-online-too', socketM)
   async imOnlineToo(
     @SocketQueryParam('id') userId: string,
     @SocketIO() io: Server,

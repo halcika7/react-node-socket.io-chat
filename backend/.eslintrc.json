@@ -11,21 +11,15 @@
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
-    },
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "plugins": [
-    "react",
     "@typescript-eslint",
     "prettier",
-    "react-hooks",
     "security"
   ],
   "extends": [
-    "plugin:react/recommended",
     "airbnb",
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
@@ -38,7 +32,6 @@
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "import/no-unresolved": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
     "no-var": 2,
     "max-params": [2, 4],
     "space-in-parens": 2,
@@ -67,17 +60,10 @@
     "no-underscore-dangle": 0,
     "import/extensions": 0,
     "import/prefer-default-export": 0,
-    "react/prop-types": 0,
     "class-methods-use-this": 0,
-    "react/jsx-one-expression-per-line": 0,
     "@typescript-eslint/no-explicit-any": 0,
     "import/order": 0,
-    "react/jsx-props-no-spreading": 0,
-    "jsx-a11y/no-static-element-interactions": 0,
-    "jsx-a11y/click-events-have-key-events": 0,
     "@typescript-eslint/camelcase": 0,
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error",
     "no-useless-constructor": 0
   }
 }

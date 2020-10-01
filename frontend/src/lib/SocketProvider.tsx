@@ -7,17 +7,25 @@ export function useSocket() {
   return useContext(SocketContext);
 }
 
-export function SocketProvider({ children, id }: { children: React.ReactNode, id: string }) {
+export function SocketProvider({
+  children,
+  id,
+  token,
+}: {
+  children: React.ReactNode;
+  id: string;
+  token: string;
+}) {
   const [socket, setSocket] = useState<SocketIOClient.Socket | null>(null);
 
   useEffect(() => {
-    const client = ClientSocket.getClient(id);
+    const client = ClientSocket.getClient(id, token);
     setSocket(client);
 
     return () => {
       client.close();
     };
-  }, [id]);
+  }, [id, token]);
 
   return (
     <SocketContext.Provider value={socket}>{children}</SocketContext.Provider>
